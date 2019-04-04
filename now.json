@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "name": "HarmanTodo",
+    "env": {
+      "DBHOST": "wmdd.cau663mueoyo.us-east-2.rds.amazonaws.com",
+      "DBPORT": "3306",
+      "DBUSER": "hgill69",
+      "DBPASSWORD": "HarmanGill-2k18",
+      "DBNAME": "serverside"
+    },
+    "builds": [{ "src": "api/*/index.js", "use": "@now/node" }],
+    "routes": [
+      { "src": "/api/get", "methods": ["GET"], "dest": "/api/get/index.js"},
+      { "src": "/api/post", "methods": ["POST"], "dest": "/api/post/index.js"},
+      { "src": "/", "status": 404},
+      { "src": "/api", "status": 404}
+    ]
+  }
